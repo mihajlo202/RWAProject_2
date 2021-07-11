@@ -1,0 +1,24 @@
+<div class="body">
+    <div class="okvir">
+        <div class="profile-div">
+            <div class="profile-image-div"> </div>
+            <div class="profile-info-div">
+                <label class="lbl-ime">{{customer.name}} {{customer.surname}}</label>
+                <label class="lbl-mail">{{customer.email}}</label>
+                <label class="lbl-mail">{{customer.address}}</label>
+            </div>
+        </div>
+        <div *ngFor="let prod of allProducts" class="example-card">
+            <div class="oglas-content">
+                <div class="oglas-details">
+                    <div>{{prod.name}}</div>
+                    <div>{{prod.description}}</div>
+                    <div class="oglas-buttons">
+                        <button class="oglas-dugme btn btn-secondary"  (click)="orderClicked(prod);">Naruci</button>
+                    </div>
+                </div>
+                <div class="oglas-image" ></div>
+            </div>
+        </div>
+    </div>
+</div>

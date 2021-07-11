@@ -1,0 +1,27 @@
+<div class="glavni">
+    <div class="main-page">
+        <div class="left-div">
+            <div class="text-customers">
+                <label>Kupite</label>
+                <label>Prodajte</label>
+            </div>
+            <div class="main-page-picture">
+                <img class="main-picture" src="../assets/shop2.png">
+            </div>
+            <button  class="login-btn" (click)="showLogInModal()" >LOGIN</button>
+        </div>
+        <div class="right-div">
+            <div class="text-actions">
+                <label>Registrujte</label>
+                <label>se</label>
+                <label>odmah ispod</label>
+            </div>
+        </div>
+    </div>
+    <div class="registration-div">
+        <app-register></app-register>
+    </div>
+    
+</div>
+
+<app-login *ngIf='displayLogIn' (cancelClicked)='hideLogInModal()'></app-login>

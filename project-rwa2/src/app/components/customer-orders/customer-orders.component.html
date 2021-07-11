@@ -1,0 +1,20 @@
+<div class="bbody">
+    <div class="ookvir">
+        <div class="pretraga" >
+              <div *ngFor="let prod of myOrderProduct">
+                <div class="example-card">
+                  <div class="oglas-content">
+                      <div class="oglas-details">
+                          <div>{{prod.name}}</div>
+                          <div>{{prod.description}}</div>
+                          <div class="oglas-buttons">
+                              <button class="oglas-dugme" mat-button (click)="cancelOrder(prod);">Otkazi</button>
+                          </div>
+                      </div>
+                      <div class="oglas-image" ></div>
+                  </div>
+                </div>
+            </div>   
+        </div>  
+    </div>
+</div>

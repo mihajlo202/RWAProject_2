@@ -1,0 +1,43 @@
+{
+  "loggedUser": [
+    {
+      "email": "mihajlo@gmail.com",
+      "password": "mihajlo",
+      "role": "seller",
+      "id": 1
+    },
+    {
+      "email": "stefan@gmail.com",
+      "password": "stefan",
+      "role": "customer",
+      "id": 2
+    }
+  ],
+  "seller": [
+    {
+      "name": "Mihajlo",
+      "surname": "Sutanovac",
+      "email": "mihajlo@gmail.com",
+      "company": "SCH",
+      "id": 1
+    }
+  ],
+  "customer": [
+    {
+      "name": "Stefan",
+      "surname": "Stamenkovic",
+      "email": "stefan@gmail.com",
+      "address": "Nis",
+      "id": 1
+    }
+  ],
+  "product": [
+    {
+      "name": "Jabuka",
+      "description": "60din/kg",
+      "sellerId": 1,
+      "id": 1
+    }
+  ],
+  "order": []
+}

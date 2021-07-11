@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="card bg-light">
+        <article class="card-body mx-auto">
+            <h4 class="card-title mt-3 text-center">Registracija</h4>
+            <form>
+                <div class="form-group">
+                    <label class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="seller" checked="true" (change)="radioChange($event);">
+                        <span class="form-check-label"> Prodavac </span> 
+                    </label>
+                    <label class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="customer" (change)="radioChange($event);">
+                        <span class="form-check-label"> Kupac</span>
+                    </label>
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input id="input-ime" name="ime" class="form-control" placeholder="Ime" type="text" required>
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input id="input-prezime" name="prezime" class="form-control" placeholder="Prezime" type="text" required>
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                    </div>
+                    <input id="input-email" name="email" class="form-control" placeholder="Email" type="email" required>
+                </div>
+                <div class="form-group input-group" *ngIf="isSeller">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                    </div>
+                    <input id="input-company" name="company" class="form-control" placeholder="Firma" type="text" required>
+                </div>
+                <div class="form-group input-group" *ngIf="!isSeller">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                    </div>
+                    <input id="input-address" name="address" class="form-control" placeholder="Adresa" type="text" required>
+                </div>
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input id="input-password" name="password" class="form-control" placeholder="Password" type="password">
+                </div>                                    
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block" (click)="btnRegistrujClicked();"> Registruj se </button>
+                </div>
+            </form>
+        </article>
+    </div>
+</div> 

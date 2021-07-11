@@ -1,0 +1,28 @@
+<div class="body">
+    <div class="okvir">
+        <div class="profile-div">
+            <div class="profile-image-div"> </div>
+            <div class="profile-info-div">
+                <label class="lbl-ime">{{seller.name}} {{seller.surname}}</label>
+                <label class="lbl-mail">{{seller.email}}</label>
+                <label class="lbl-sertifikat">{{seller.company}}</label>
+                <button class="create-event-btn" (click)="createNewJobClicked();">Novi proizvod</button>
+            </div>
+        </div>
+        <div *ngFor="let prod of allProducts" class="example-card">
+            <div class="oglas-content">
+                <div class="oglas-details">
+                    <div>{{prod.name}}</div>
+                    <div>{{prod.description}}</div>
+                    <div class="oglas-buttons">
+                        <button class="oglas-dugme btn btn-secondary"  (click)="onUpdateClick(prod);">Izmeni</button>
+                        <button class="oglas-dugme btn btn-secondary"  (click)="onDeleteClick(prod);">Obriši</button>
+                    </div>
+                </div>
+                <div class="oglas-image" ></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-create-product *ngIf="displayEventModal" [isUpdating]="isUpdating" (cancelClicked)='hideJobModal()'></app-create-product>
