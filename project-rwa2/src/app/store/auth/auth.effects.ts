@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
-import { mergeMap, tap } from "rxjs/operators";
+import { switchMap, tap } from "rxjs/operators";
 import { RemoveCustomerInfo } from "../customer/customer.actions";
 import { RemoveOrders } from "../order/order.actions";
 import { RemoveAllProducts } from "../product/product.actions";
@@ -17,7 +17,7 @@ export class AuthEffects {
 
   logout$ = createEffect(() => this.actions$.pipe(
     ofType(LogOut),
-    mergeMap(()=> [
+    switchMap(()=> [
        RemoveCustomerInfo(),
        RemoveSellerInfo(),
        RemoveAllProducts(),
